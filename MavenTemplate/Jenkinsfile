@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Init') {
            steps {
-                def jobName="MavenTemplate"
+              jobName="MavenTemplate"
               echo "jobName=${jobName}"
            }
         }
