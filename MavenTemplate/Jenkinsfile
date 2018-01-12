@@ -8,18 +8,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..I updated this...and again...1'
-                sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true install'
+                echo 'Building..1'
+                sh 'mvn -f MavenTemplate/ clean'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing..1'
+                sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying....1'
             }
         }
     }
