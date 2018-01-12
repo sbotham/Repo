@@ -1,10 +1,14 @@
 pipeline {
     agent any
+  tools {
+        maven 'Maven 3.3.2'
+        jdk 'Java 8u152'
+    }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..I updated this...and again'
+                echo 'Building..I updated this...and again...1'
             }
         }
         stage('Test') {
