@@ -29,9 +29,12 @@ pipeline {
               }
                echo "scannerHome=${scannerHome}"
                
-              withSonarQubeEnv('Sonar') {
-                 bat "${scannerHome}/bin/sonar-scanner.bat" 
-              } 
+       
+    withSonarQubeEnv('SonarQ') {
+      sh "${scannerHome}/bin/sonar-scanner"
+    }
+               
+      
            }
         }
         
