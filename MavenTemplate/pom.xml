@@ -5,4 +5,15 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>MavenTemplate</name>
   <description>MavenTemplate</description>
+  
+  
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>5.0.2.RELEASE</version>
+</dependency>
+  
+  </dependencies>
 </project>
