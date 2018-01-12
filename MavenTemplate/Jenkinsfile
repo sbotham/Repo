@@ -4,6 +4,8 @@ pipeline {
         maven 'Maven 3.5.2'
         jdk 'Java 8u152'
     }
+    
+      def jobName="MavenTemplate"
 
     stages {
         stage('Init') {
