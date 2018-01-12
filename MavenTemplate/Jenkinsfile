@@ -2,7 +2,11 @@ pipeline {
     agent any
   tools {
         maven 'Maven 3.3.2'
+<<<<<<< HEAD
         jdk 'Java 8u152'
+=======
+        jdk 'jdk8u152'
+>>>>>>> branch 'master' of https://github.com/sbotham/Repo.git
     }
 
     stages {
