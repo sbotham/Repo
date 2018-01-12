@@ -6,18 +6,27 @@ pipeline {
     }
 
     stages {
+        stage('Init') {
+           steps {
+              echo "jobName=${jobName}"
+           }
+        }
+        
+        
         stage('Build') {
             steps {
                 echo 'Building..1'
                 sh 'mvn -f MavenTemplate/ clean'
             }
         }
+        
         stage('Test') {
             steps {
                 echo 'Testing..1'
                 sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true test'
             }
         }
+        
         stage('Deploy') {
             steps {
                 echo 'Deploying....1'
