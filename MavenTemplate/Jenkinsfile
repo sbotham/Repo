@@ -10,6 +10,7 @@ pipeline {
     stages {
         stage('Init') {
            steps {
+                             echo 'Init'
            
            
                     script {
@@ -22,8 +23,9 @@ pipeline {
         
         stage('Sonarqube analysis') {
            steps {
+              echo 'Sonarqube analysis'
               script {
-                 scannerHome = tool 'SonarScanner';
+                 scannerHome = tool 'Sonar';
               }
               withSonarQubeEnv('SonarQube') {
                  bat "${scannerHome}/bin/sonar-scanner.bat" 
