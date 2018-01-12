@@ -46,7 +46,7 @@ pipeline {
     
         post {
         always {
-            echo "Post-always"
+            echo "Post-always Updated from github"
         }
         success {
             echo "Post-success"
