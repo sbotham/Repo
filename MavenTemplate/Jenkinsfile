@@ -10,7 +10,12 @@ pipeline {
     stages {
         stage('Init') {
            steps {
-              jobName="MavenTemplate"
+           
+           
+                    script {
+                       jobName="MavenTemplate"
+                    }
+              
               echo "jobName=${jobName}"
            }
         }
@@ -36,5 +41,21 @@ pipeline {
                 echo 'Deploying....1'
             }
         }
+        
     }
+    
+        post {
+        always {
+            echo "Post-always"
+        }
+        success {
+            echo "Post-success"
+        }
+        failure {
+            echo "Post-failure"
+        }
+    }
+    
+    
+    
 }
