@@ -5,11 +5,12 @@ pipeline {
         jdk 'Java 8u152'
     }
     
-      def jobName="MavenTemplate"
+ 
 
     stages {
         stage('Init') {
            steps {
+                def jobName="MavenTemplate"
               echo "jobName=${jobName}"
            }
         }
@@ -18,6 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..1'
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 sh 'mvn -f MavenTemplate/ clean'
             }
         }
