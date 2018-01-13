@@ -21,22 +21,25 @@ pipeline {
            }
         }
         
+        
+        /* Comment this until Sonar is up and running */
+        /*
         stage('Sonarqube analysis') {
            steps {
               echo 'Sonarqube analysis'
               script {
                  scannerHome = tool 'Sonar';
               }
-               echo "scannerHome=${scannerHome}"
+              echo "scannerHome=${scannerHome}"
                
        
-    withSonarQubeEnv('SonarServer') {
-      sh "${scannerHome}/bin/sonar-scanner"
-    }
+              withSonarQubeEnv('SonarServer') {
+                 sh "${scannerHome}/bin/sonar-scanner"
+              }
                
       
            }
-        }
+        }*/
         
         
         stage('Build') {
