@@ -46,14 +46,14 @@ pipeline {
             steps {
                 echo 'Building..1'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                sh 'mvn -f MavenTemplate/ clean'
+                sh 'mvn -f MavenTemplate/ -B clean'
             }
         }
         
         stage('Test') {
             steps {
                 echo 'Testing..1'
-                sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true test'
+                sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true -B test'
             }
         }
         
