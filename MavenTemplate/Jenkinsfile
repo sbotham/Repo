@@ -60,8 +60,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....1'
+                echo 'project.name=${project.name}'
                 sh 'pwd'
-                sh 'cp MavenTemplate/target/*.jar /tmp/'
+                sh 'cp MavenTemplate/target/MavenTemplate-0.0.1-SNAPSHOT.jar /tmp/MavenTemplate.jar'
             }
         }
         
