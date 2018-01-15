@@ -84,7 +84,6 @@ pipeline {
                  ]
               }"""
               server.upload(uploadSpec)
-        
            }
         }
     
@@ -98,8 +97,13 @@ pipeline {
         failure {
             echo "Post-failure"
         }
-    }
+        }
+            
+            
+            
+            
+    } // Stages
     
     
     
-}
+} // Pipeline
