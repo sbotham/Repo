@@ -44,6 +44,7 @@ pipeline {
         
         stage('Build') {
             steps {
+                echo "888"
                 echo 'Building..1'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 // export JENKINS_MAVEN_AGENT_DISABLED=true
