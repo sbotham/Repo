@@ -59,6 +59,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
+                def pom = readMavenPom file: 'pom.xml'
                 echo 'Deploying....1'
                 echo 'project.name=${project.name}'                
                 def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
