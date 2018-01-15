@@ -60,8 +60,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....1'
-                
-                sh 'cp target/*.jar /tmp/'
+                sh 'pwd'
+                sh 'cp ./target/*.jar /tmp/'
             }
         }
         
