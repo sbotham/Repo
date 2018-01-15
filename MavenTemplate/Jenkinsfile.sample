@@ -1,0 +1,43 @@
+node {
+    //stage 'Checkout'
+
+    // checkout scm
+    
+  stage('checkout and build') {
+      node {
+        checkout scm
+        echo "${env.BRANCH_NAME}"
+        withMaven(globalMavenSettingsConfig: '32b4e311-5f45-4340-afaa-83b4e8542352', jdk: 'JDK8', maven: 'Maven3.5') {
+          withSonarQubeEnv('Framework SonarQube Server') {
+             sh "mvn -gs ${env.globalConfig} -B clean package sonar:sonar"
+          }  
+        }
+        stash excludes: 'target/', includes: '**', name: 'source'
+        //dir('target') {
+        //    stash excludes: '', includes: '**', name: 'target'
+        //} 
+      }
+  }
+  
+    stage("Pass Quality Gate"){
+          timeout(time: 1, unit: 'HOURS') {
+              def qg = waitForQualityGate()
+            echo "${qg.status}"
+              if (qg.status != 'OK' && qg.status != 'WARN' ) {
+                  error "Pipeline aborted due to quality gate failure: ${qg.status}"
+              }
+          }
+    }
+    
+    stage("Add to Nexus"){
+    node {
+            checkout scm
+            echo "${env.BRANCH_NAME}"
+            withMaven(globalMavenSettingsConfig: '32b4e311-5f45-4340-afaa-83b4e8542352', jdk: 'JDK8', maven: 'Maven3.5') {
+                withSonarQubeEnv('Framework SonarQube Server') {
+                 sh "mvn -gs ${env.globalConfig} -B deploy"
+                }  
+            }
+        }
+    }        
+}
