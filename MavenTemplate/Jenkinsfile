@@ -4,9 +4,7 @@ pipeline {
         maven 'Maven 3.5.2'
         jdk 'Java 8u152'
     }
-    
- 
-
+   
     stages {
         stage('Init') {
            steps {
@@ -48,7 +46,7 @@ pipeline {
                 echo 'Building..1'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 // export JENKINS_MAVEN_AGENT_DISABLED=true
-                sh 'mvn -f MavenTemplate/ -B clean'
+                sh 'mvn -f MavenTemplate/ -B install'
             }
         }
         
@@ -59,13 +57,37 @@ pipeline {
             }
         }
         
+        
+        /*
         stage('Deploy') {
             steps {
+                def pom = readMavenPom file: 'pom.xml'
                 echo 'Deploying....1'
+                echo 'project.name=${project.name}'                
+                def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
+                //echo 'pom.version='${pom.version}
+                echo 'version='${version}    
+                sh 'pwd'
+                sh 'cp MavenTemplate/target/MavenTemplate-0.0.1-SNAPSHOT.jar /tmp/MavenTemplate.jar'
             }
         }
+        */
         
-    }
+        stage('DeployToArt') {
+           steps {
+             script {
+                 def uploadSpec = """{
+                 "files": [
+                 {
+                    "pattern": "MavenTemplate/MavenTemplate-0.0.1-SNAPSHOT.jar",
+                    "target": "/libs-snapshot-local/"
+                 }
+                 ]
+              }"""
+              server.upload(uploadSpec)
+              }
+           }
+        }
     
         post {
         always {
@@ -77,8 +99,13 @@ pipeline {
         failure {
             echo "Post-failure"
         }
-    }
+        }
+            
+            
+            
+            
+    } // Stages
     
     
     
-}
+} // Pipeline
