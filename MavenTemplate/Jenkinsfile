@@ -57,6 +57,8 @@ pipeline {
             }
         }
         
+        
+        /*
         stage('Deploy') {
             steps {
                 def pom = readMavenPom file: 'pom.xml'
@@ -69,6 +71,19 @@ pipeline {
                 sh 'cp MavenTemplate/target/MavenTemplate-0.0.1-SNAPSHOT.jar /tmp/MavenTemplate.jar'
             }
         }
+        */
+        
+                stage('DeployToArt') {
+            steps {
+        def uploadSpec = """{
+  "files": [
+    {
+      "pattern": "MavenTemplate/MavenTemplate-0.0.1-SNAPSHOT.jar",
+      "target": "/libs-snapshot-local/"
+    }
+ ]
+}"""
+server.upload(uploadSpec)
         
     }
     
