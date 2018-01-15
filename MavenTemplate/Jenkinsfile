@@ -4,9 +4,7 @@ pipeline {
         maven 'Maven 3.5.2'
         jdk 'Java 8u152'
     }
-    
- 
-
+   
     stages {
         stage('Init') {
            steps {
