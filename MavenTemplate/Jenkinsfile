@@ -61,7 +61,7 @@ pipeline {
             steps {
                 echo 'Deploying....1'
                 sh 'pwd'
-                sh 'cp ./target/*.jar /tmp/'
+                sh 'cp MavenTemplate/target/*.jar /tmp/'
             }
         }
         
