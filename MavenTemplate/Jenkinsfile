@@ -75,7 +75,8 @@ pipeline {
         
         stage('DeployToArt') {
            steps {
-              def uploadSpec = """{
+                          script {
+                              def uploadSpec = """{
                  "files": [
                  {
                     "pattern": "MavenTemplate/MavenTemplate-0.0.1-SNAPSHOT.jar",
@@ -84,7 +85,7 @@ pipeline {
                  ]
               }"""
               server.upload(uploadSpec)
-           }
+                          }}
         }
     
         post {
