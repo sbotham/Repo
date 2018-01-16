@@ -23,7 +23,8 @@
       <uniqueVersion>true</uniqueVersion>
       <id>propSnap</id>
       <name>Propellors Snapshots</name>
-      <url>http://192.168.0.5:8081/nexus</url>
+      <url>http://172.17.0.5:8081/nexus/content/repositories/snapshots/</url>
+      <!-- <url>http://192.168.0.5:8081/nexus</url>-->
       <layout>legacy</layout>
     </snapshotRepository>
   </distributionManagement>
