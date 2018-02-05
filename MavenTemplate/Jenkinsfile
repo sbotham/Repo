@@ -58,6 +58,12 @@ pipeline {
         }
         
         
+        stage('Checkup') {
+            steps {
+             input "Does the test look ok?"
+            }
+        }
+        
         /*
         stage('Deploy') {
             steps {
@@ -73,6 +79,7 @@ pipeline {
         }
         */
         
+        /*
         stage('DeployToArt') {
            steps {
              script {
@@ -88,6 +95,7 @@ pipeline {
               }
            }
         }
+        */
     
         post {
         always {
