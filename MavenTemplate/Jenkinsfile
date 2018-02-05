@@ -97,6 +97,7 @@ pipeline {
         }
         */
     
+        /*
         post {
         always {
             echo "Post-always Updated from github"
@@ -107,7 +108,7 @@ pipeline {
         failure {
             echo "Post-failure"
         }
-        }
+        }*/
             
             
             
