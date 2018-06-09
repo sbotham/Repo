@@ -39,3 +39,18 @@ c:\git\Repo\MavenTemplate
 Remote
 
 sbotham@arccorp.com\Repo\MavenTemplate
+
+
+
+
+
+
+
+
+If project doesnt build in IDE/STS due to lombok errors,
+follow instructions for re-adding lombok to STS
+
+https://stackoverflow.com/questions/35842751/lombok-not-working-with-sts
+
+
+
