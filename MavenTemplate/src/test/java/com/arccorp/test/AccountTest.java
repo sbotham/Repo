@@ -11,8 +11,8 @@ import com.arccorp.domain.Account;
 public class AccountTest {
 	  @Test
 	    public void createAccount(){
-		log.info("Running createAccount test");
-		    
+		//log.info("Running createAccount test");
+		System.out.print("Running createAccount test");   
 		    
 		    
 		    
