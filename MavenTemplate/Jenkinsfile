@@ -17,8 +17,7 @@ pipeline {
               
               echo "jobName=${jobName}"
            }
-        }
-        
+        }        
         
         /* Comment this until Sonar is up and running */
 /*        
@@ -52,7 +51,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                echo 'Testing..1'
+                echo 'Testing.......1'
                 sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true -B test'
             }
         }
