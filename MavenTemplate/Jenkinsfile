@@ -57,12 +57,15 @@ pipeline {
             }
         }
         
+        /* If this is enabled, the build will wait for manual intervention before proceeding */
         
+        /*
         stage('Checkup') {
             steps {
              input "Does the test look ok?"
             }
         }
+        */
         
         /*
         stage('Deploy') {
