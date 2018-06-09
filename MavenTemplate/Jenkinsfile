@@ -21,7 +21,7 @@ pipeline {
         
         
         /* Comment this until Sonar is up and running */
-        
+/*        
         stage('Sonarqube analysis') {
            steps {
               echo 'Sonarqube analysis'
@@ -37,7 +37,7 @@ pipeline {
               }
               
            }
-        }
+        }*/
         
         
         stage('Build') {
