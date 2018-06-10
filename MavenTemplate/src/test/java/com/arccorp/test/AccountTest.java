@@ -11,6 +11,7 @@ public class AccountTest {
 	@Test
 	public void createAccount() {
 		// log.info("Running createAccount test");
+		System.out.print("Updated from HP-BUILD");
 		System.out.print("Running createAccount test, Starts");
 
 		Account a = new Account("123", "Steves Account");
