@@ -11,7 +11,7 @@ public class AccountTest {
 	@Test
 	public void createAccount() {
 		// log.info("Running createAccount test");
-		System.out.print(" Updated from feature");
+		System.out.print(" Updated from feature - 12JUN18");
 		
 		System.out.print("Running createAccount test, Starts");
 
