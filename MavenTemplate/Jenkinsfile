@@ -110,6 +110,15 @@ pipeline {
         */
     
         
+
+            
+            
+            
+            
+    } // Stages
+    
+    
+    
         post {
         
            always {
@@ -125,13 +134,8 @@ pipeline {
            }
         
         }
-            
-            
-            
-            
-    } // Stages
-    
-
+        
+        
     
 } // Pipeline
 
