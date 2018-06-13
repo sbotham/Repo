@@ -1,6 +1,9 @@
 pipeline {
     agent any
-  tools {
+    
+    
+    
+    tools {
         maven 'Maven3.5'
         jdk 'JDK8'
     }
@@ -106,18 +109,22 @@ pipeline {
         }
         */
     
-        /*
+        
         post {
-        always {
-            echo "Post-always Updated from github"
+        
+           always {
+              echo "Post-always Updated from github"
+           }
+        
+           success {
+              echo "Post-success"
+           }
+        
+           failure {
+              echo "Post-failure"
+           }
+        
         }
-        success {
-            echo "Post-success"
-        }
-        failure {
-            echo "Post-failure"
-        }
-        }*/
             
             
             
