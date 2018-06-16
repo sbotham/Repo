@@ -15,7 +15,7 @@ pipeline {
         stage('Init') {
            steps {
            
-              notifyStarted()
+              notifyStarted("Job started")
               
               
                              echo 'Init'
@@ -51,18 +51,26 @@ pipeline {
         
         stage('Build') {
             steps {
+                notifyStarted("Build started")
+                
                 echo "888"
                 echo 'Building..1'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 // export JENKINS_MAVEN_AGENT_DISABLED=true
                 sh 'mvn -f MavenTemplate/ -B install'
+                
+                notifyStarted("Build ended")
             }
         }
         
         stage('Test') {
             steps {
+                notifyStarted("Tests started")
+                
                 echo 'Testing.......1'
                 sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true -B test'
+                
+                notifyStarted("Tests Ended")
             }
         }
         
@@ -140,7 +148,7 @@ pipeline {
 } // Pipeline
 
 
-    def notifyStarted() {
+    def notifyStarted(message) {
   // send to Slack
  // slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
  
@@ -153,10 +161,10 @@ pipeline {
   emailext (
       
 
-      subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: '231saleln@gmail.com',
+      subject: message ": Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: '231saleln@gmail.com',
 
 
-      body: "STARTED: Job ${env.BUILD_URL} ${env.JOB_NAME}",
+      body: message ": Job ${env.BUILD_URL} ${env.JOB_NAME}",
         
       recipientProviders: [[$class: 'DevelopersRecipientProvider']]
     )
