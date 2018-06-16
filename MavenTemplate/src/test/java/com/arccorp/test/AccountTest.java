@@ -11,7 +11,7 @@ public class AccountTest {
 	@Test
 	public void createAccount() {
 		// log.info("Running createAccount test");
-		System.out.print(" changed on master - 13JUN18 (3.09pm)");
+		System.out.print(" changed on master - 13JUN18 (3.10pm)");
 		System.out.print("Running createAccount test, Starts");
 
 		Account a = new Account("123", "Steves Account");
