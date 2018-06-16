@@ -82,7 +82,7 @@ set a var to id jenkins container
 7. external access for ssh to ubuntu
 8. auto start docker cons on restart of ubuntu
 
-9. build on scm change , can u controll which files trigger build i.e dont build on change of readme
+9. build on scm change , can u control which files trigger build ?? i.e dont build on change of readme
 
 
 
