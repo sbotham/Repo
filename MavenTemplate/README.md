@@ -67,3 +67,20 @@ https://stackoverflow.com/questions/35842751/lombok-not-working-with-sts
 
 
 
+to do:-
+1.
+create email 
+add this to jenkins cont.
+jenkins4813@gmail.com
+2.
+set a var to id ubuntu box
+3.
+set a var to id jenkins container
+4. make all dockers ip cons static
+5. set up sonar
+6. add email notification for start / shutdown of build box
+7. external access for ssh to ubuntu
+8. auto start docker cons on restart of ubuntu
+
+
+
