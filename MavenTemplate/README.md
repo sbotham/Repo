@@ -83,6 +83,10 @@ set a var to id jenkins container
 8. auto start docker cons on restart of ubuntu
 
 9. build on scm change , can u control which files trigger build ?? i.e dont build on change of readme
+10. centralize jenkins file
+see email 231saleln@gmail.com
+
+
 
 
 
