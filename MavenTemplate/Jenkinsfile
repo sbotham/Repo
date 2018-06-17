@@ -18,7 +18,7 @@ pipeline {
 
               
             script {
-                       envVars="value of envVars"
+                       envVars="${env.B_SYSTEM_NAME}"
                     }
                     
               notifyStarted("Job started", "$envVars")
@@ -175,7 +175,8 @@ pipeline {
 
       subject: "$message : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: '231saleln@gmail.com',
 
-      body: "$message : Job ${env.BUILD_URL} ${env.JOB_NAME} $envVars",
+      body: "$message : Job ${env.BUILD_URL} ${env.JOB_NAME} 
+             envVars=$envVars",
 
       recipientProviders: [[$class: 'DevelopersRecipientProvider']]
     )
