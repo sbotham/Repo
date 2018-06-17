@@ -15,7 +15,7 @@ pipeline {
         stage('Init') {
            steps {
            
-              envVars="B_SYSTEM_NAME=${B_SYSTEM_NAME}"
+              envVars="B_SYSTEM_NAME"
            
               notifyStarted("Job started", envVars)
               
