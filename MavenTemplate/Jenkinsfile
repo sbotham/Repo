@@ -21,7 +21,7 @@ pipeline {
                        envVars="value of envVars"
                     }
                     
-              notifyStarted("Job started", "1")
+              notifyStarted("Job started", "$envVars")
               
               
                              echo 'Init'
