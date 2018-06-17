@@ -20,7 +20,7 @@ pipeline {
               }
               
            
-              notifyStarted("Job started", ${envVars})
+              notifyStarted("Job started", "${envVars}")
               
               
                              echo 'Init'
