@@ -15,9 +15,7 @@ pipeline {
         stage('Init') {
            steps {
            
-              script {
-                 envVars="B_SYSTEM_NAME"
-              }
+
               
            
               notifyStarted("Job started", "${envVars}")
@@ -56,7 +54,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                notifyStarted("Build started")
+                notifyStarted("Build started", "")
                 
                 echo "888"
                 echo 'Building..1'
@@ -64,13 +62,13 @@ pipeline {
                 // export JENKINS_MAVEN_AGENT_DISABLED=true
                 sh 'mvn -f MavenTemplate/ -B install'
                 
-                notifyStarted("Build ended")
+                notifyStarted("Build ended", "")
             }
         }
         
         stage('Test') {
             steps {
-                notifyStarted("Tests started")
+                notifyStarted("Tests started", "")
                 
                 echo 'Testing.......1'
                 sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true -B test'
