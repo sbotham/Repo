@@ -15,7 +15,9 @@ pipeline {
         stage('Init') {
            steps {
            
-              notifyStarted("Job started")
+              envVars="B_SYSTEM_NAME=${B_SYSTEM_NAME}"
+           
+              notifyStarted("Job started", envVars)
               
               
                              echo 'Init'
@@ -148,7 +150,7 @@ pipeline {
 } // Pipeline
 
 
-    def notifyStarted(message) {
+    def notifyStarted(message, envVars) {
   // send to Slack
  // slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
  
@@ -163,7 +165,7 @@ pipeline {
   
   emailext (
       
-	  envVars="B_SYSTEM_NAME=${B_SYSTEM_NAME}"
+	 // envVars="B_SYSTEM_NAME=${B_SYSTEM_NAME}"
 
       subject: "$message : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: '231saleln@gmail.com',
 
