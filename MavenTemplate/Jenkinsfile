@@ -158,13 +158,16 @@ pipeline {
   //  )
  
   // send to email
+  
+  envVars=B_SYSTEM_NAME=${B_SYSTEM_NAME}
+  
   emailext (
       
-
+	  
 
       subject: "$message : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: '231saleln@gmail.com',
 
-      body: "$message : Job ${env.BUILD_URL} ${env.JOB_NAME}",
+      body: "$message : Job ${env.BUILD_URL} ${env.JOB_NAME} ${envVars}",
 
       recipientProviders: [[$class: 'DevelopersRecipientProvider']]
     )
