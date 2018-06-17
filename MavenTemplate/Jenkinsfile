@@ -76,7 +76,7 @@ pipeline {
                 echo 'Testing.......1'
                 sh 'mvn -f MavenTemplate/ -Dmaven.test.failure.ignore=true -B test'
                 
-                notifyStarted("Tests Ended")
+                notifyStarted("Tests Ended", "")
             }
         }
         
