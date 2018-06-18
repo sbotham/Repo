@@ -140,13 +140,7 @@ update shortcut
  			sonar
  			nexus etc
 
-
-
-
-
-
-
-
+16. dont send emails to sbotham@arccorp.com from hp-build-jenkins
 
 
 
