@@ -17,9 +17,9 @@ pipeline {
            
 
               
-            //script {
+            script {
                        envVars="${env.B_SYSTEM_NAME}"
-            //        }
+                    }
                     
               notifyStarted("Job started", "$envVars")
               
