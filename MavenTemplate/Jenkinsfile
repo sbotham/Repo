@@ -14,9 +14,7 @@ pipeline {
     stages {
         stage('Init') {
            steps {
-           
-
-              
+                         
             script {
                        envVars="${env.B_SYSTEM_NAME}"
                     }
