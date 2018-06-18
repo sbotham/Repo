@@ -39,11 +39,12 @@ pipeline {
         stage('Sonarqube analysis') {
            steps {
               echo 'Sonarqube analysis'
-              script {
+              
+              /*script {
                  scannerHome = tool 'Sonar';
               }
               echo "scannerHome=${scannerHome}"
-               
+               */
        
               withSonarQubeEnv('SonarServer') {
                  //sh "${scannerHome}/bin/sonar-scanner"
