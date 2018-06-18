@@ -34,7 +34,8 @@ pipeline {
         }        
         
         /* Comment this until Sonar is up and running */
-/*        
+        /* check for existence of sonar before running this step? */
+        
         stage('Sonarqube analysis') {
            steps {
               echo 'Sonarqube analysis'
@@ -50,7 +51,7 @@ pipeline {
               }
               
            }
-        }*/
+        }
         
         
         stage('Build') {
