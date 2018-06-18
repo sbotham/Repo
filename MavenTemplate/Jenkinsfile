@@ -171,6 +171,8 @@ pipeline {
   
   emailext (
       
+      
+      
 	 // envVars="B_SYSTEM_NAME=${B_SYSTEM_NAME}"
 
       subject: "$message : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: '231saleln@gmail.com',
