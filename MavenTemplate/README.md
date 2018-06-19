@@ -126,7 +126,12 @@ HOSTNAME=system id or docker image id for docker containers
 		use git to check these in from skutter					DONE
 		scripts to run docker cons etc
 		
-12. auto populate commit message in STS
+12. auto populate commit message in STS							DONE
+		1. install mylyn plugin
+		2. window/prefs/myln/team  set commit message
+		3. start a task and make active (view mylyn/tasklist/create)  right click and activate
+		4. 
+		
 
 13. create shortcut to run putty and connect to HP-BUILD		DONE
 update shortcut
@@ -140,9 +145,9 @@ update shortcut
  			sonar
  			nexus etc
 
-16. dont send emails to sbotham@arccorp.com from hp-build-jenkins
+16. dont send emails to sbotham@arccorp.com from hp-build-jenkins		DONE
 
-17. send console log on build failure 
+17. send console log on build failure 								
 
 
 

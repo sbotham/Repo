@@ -11,13 +11,13 @@ public class AccountTest {
 	@Test
 	public void createAccount() {
 		// log.info("Running createAccount test");
-		System.out.print(" changed on master - 13JUN18 (3.11pm)");
-		System.out.print("Running createAccount test, Starts");
+		System.out.println(" changed on master - 17JUN18");
+		System.out.println("Running createAccount test, Starts");
 
 		Account a = new Account("123", "Steves Account");
 		assertEquals("Steves Account was created", true, a.getName().equalsIgnoreCase("Steves Account"));
 
-		System.out.print("Running createAccount test, Ends");
+		System.out.println("Running createAccount test, Ends");
 
 	}
 

@@ -14,6 +14,5 @@ public class Account {
 	private String name;	
 	
 	
-	
 	//pirate String abc;
 }
