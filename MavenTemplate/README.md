@@ -35,35 +35,19 @@ https://github.com/sbotham/Repo.git
 will create
 Repo / MavenTemplate /  on git hub when pushed
 
-
-
-
-
-
 Locally
 
 c:\git\Repo\MavenTemplate
-
-
 
 
 Remote
 
 sbotham@arccorp.com\Repo\MavenTemplate
 
-
-
-
-
-
-
-
 If project doesnt build in IDE/STS due to lombok errors,
 follow instructions for re-adding lombok to STS
 
 https://stackoverflow.com/questions/35842751/lombok-not-working-with-sts
-
-
 
 to do:-
 
@@ -116,7 +100,7 @@ HOSTNAME=system id or docker image id for docker containers
 
 9. build on scm change , can u control which files trigger build ?? i.e dont build on change of readme
 
-10. centralize jenkins file see email 231saleln@gmail.com
+10. centralize jenkins file see email 231saleln@gmail.com		DONE
 
 	https://dev.to/jalogut/centralise-jenkins-pipelines-configuration-using-shared-libraries
 	
@@ -146,7 +130,15 @@ update shortcut
 
 16. dont send emails to sbotham@arccorp.com from hp-build-jenkins		DONE
 
-17. send console log on build failure 								
+17. send console log on build 									DONE
+		selectively send on build failure
+
+18. 	create shortcuts for STS workspaces
+			-data {WS PATH} in shortcut gets you there.
+			
+19.
+
+		
 
 
 
