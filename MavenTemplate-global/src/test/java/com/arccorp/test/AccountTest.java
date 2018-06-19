@@ -18,7 +18,6 @@ public class AccountTest {
 		assertEquals("Steves Account was created", true, a.getName().equalsIgnoreCase("Steves Account"));
 
 		System.out.print("Running createAccount test, Ends");
-
 	}
 
 }
