@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import com.arccorp.domain.Account;
 
-
 public class AccountTest {
 	@Test
 	public void createAccount() {
