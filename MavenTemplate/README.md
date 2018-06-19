@@ -10,8 +10,6 @@ https://github.com/sbotham/Repo		account is sbotham@arccorp.com
 
 
 
-
-
 Create a maven project
 add 1 dependency
 
@@ -130,7 +128,8 @@ HOSTNAME=system id or docker image id for docker containers
 		1. install mylyn plugin
 		2. window/prefs/myln/team  set commit message
 		3. start a task and make active (view mylyn/tasklist/create)  right click and activate
-		4. 
+		
+		 
 		
 
 13. create shortcut to run putty and connect to HP-BUILD		DONE
