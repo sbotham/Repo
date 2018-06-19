@@ -1,5 +1,7 @@
 package com.arccorp.domain;
 
+
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,8 @@ import lombok.NoArgsConstructor;
 public class Account {
 	private String id;
 	private String name;	
+	
+	
 	
 	//pirate String abc;
 }
