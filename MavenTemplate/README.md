@@ -142,5 +142,9 @@ update shortcut
 
 16. dont send emails to sbotham@arccorp.com from hp-build-jenkins
 
+17. send console log on build failure 
+
+
+
 
 
