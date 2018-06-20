@@ -4,12 +4,6 @@ build
 resides at:-
 https://github.com/sbotham/Repo		account is sbotham@arccorp.com
 
-
-
-
-
-
-
 Create a maven project
 add 1 dependency
 
