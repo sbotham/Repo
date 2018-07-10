@@ -1,7 +1,6 @@
     /* */
     
-    @Library('github.com/cloudogu/ces-build-lib@caa96324a73cdefb795fcefb9a708885728348ed')
-    import com.cloudogu.ces.cesbuildlib.*
+
     
     
     @Library("standardPipeline") _
