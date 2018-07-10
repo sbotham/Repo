@@ -3,11 +3,13 @@
     @Library("standardPipeline") _
     
     standardPipeline {
+    
+    /*
         agent any
         tools {
            maven 'Maven3.5'
            jdk 'JDK8'
-        }
+        }*/
     
     
         projectName = "MavenTemplate-global"
