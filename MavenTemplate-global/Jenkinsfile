@@ -1,6 +1,6 @@
     /* */
     
-    @Library('https://github.com/cloudogu/ces-build-lib/commit/caa96324a73cdefb795fcefb9a708885728348ed')
+    @Library('github.com/cloudogu/ces-build-lib/commit/caa96324a73cdefb795fcefb9a708885728348ed')
     import com.cloudogu.ces.cesbuildlib.*
     
     
