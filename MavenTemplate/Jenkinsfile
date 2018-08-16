@@ -14,12 +14,17 @@ pipeline {
     stages {
         stage('Init') {
            steps {
+
                          
             script {
                        envVars="${env.B_SYSTEM_NAME}"
                     }
                     
               notifyStarted("Job started", "$envVars")
+
+           
+              notifyStarted()
+
               
               
                              echo 'Init'
@@ -154,6 +159,7 @@ pipeline {
 } // Pipeline
 
 
+
     def notifyStarted(message, envVars) {
     
     
@@ -174,7 +180,7 @@ pipeline {
       
 	 // envVars="B_SYSTEM_NAME=${B_SYSTEM_NAME}"
 
-      subject: "$message : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: '231saleln@gmail.com',
+      subject: "$message : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'", to: 'sbotham@arccorp.com',
 
       body: "$message : Job ${env.BUILD_URL} ${env.JOB_NAME} envVars=$envVars",
 
