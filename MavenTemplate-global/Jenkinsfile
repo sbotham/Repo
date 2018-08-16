@@ -1,8 +1,23 @@
     /* */
     
+
+    //@Library('github.com/cloudogu/ces-build-lib@caa96324a73cdefb795fcefb9a708885728348ed')
+    //import com.cloudogu.ces.cesbuildlib.*
+    
     @Library("standardPipeline") _
     
     standardPipeline {
+    
+
+        /*def mvnHome = tool 'Maven3.5'
+        def javaHome = tool 'JDK8'
+        Maven mvn = new Maven(this, mvnHome, javaHome)
+
+
+        sh "mvn -f ${config.projectName}/ -B install"
+        */
+        
+    
         projectName = "MavenTemplate-global"
         serverDomain = "Project1 Server Domain"
         stevesVar = "Steves var passed from MavenTemplate-global"
